@@ -12,7 +12,7 @@ def parse(input):
     right_list = []
     pairs = input.split('\n')
     for pair in pairs:
-        l,*_,r = pair.split(' ') 
+        l,r = pair.split() 
         left_list.append(int(l.strip()))
         right_list.append(int(r.strip()))
     left_list.sort()
@@ -31,12 +31,8 @@ def part2(left_list,right_list):
         a.append(id * right_list.count(id))
     print(sum(a))
 
-
-
-
 with open('input_1.txt') as f :
     input = f.read()
     left_list, right_list = parse(input.strip())
     part1(left_list,right_list)
     part2(left_list,right_list)
-
