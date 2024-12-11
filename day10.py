@@ -103,4 +103,3 @@ if __name__ == '__main__':
     grid = [list(map(int,list(row))) for row in data.strip().split('\n')]
     print('part one = ', part1(grid))
     print('part two = ', part2(grid))
-
